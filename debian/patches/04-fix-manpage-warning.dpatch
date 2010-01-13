@@ -1,0 +1,15 @@
+#!/bin/sh /usr/share/dpatch/dpatch-run
+## 04-fix-manpage-warning.dpatch
+##
+## DP: Fix warning in manpage caused by unknown symbol (fixes a lintian
+## DP: warning).
+
+diff --git a/doc/cscope.1 b/doc/cscope.1
+index 6a3a86b..194cf0c 100644
+--- a/doc/cscope.1
++++ b/doc/cscope.1
+@@ -1,4 +1,3 @@
+-.PU
+ .TH CSCOPE "1" "January 2007" "The Santa Cruz Operation"
+ .SH NAME
+ cscope - interactively examine a C program 

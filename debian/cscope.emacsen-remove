@@ -1,0 +1,11 @@
+#!/bin/sh
+set -e
+
+FLAVOUR=$1
+PACKAGE=cscope
+ELCFILE=xcscope.elc
+
+if [ $FLAVOUR != emacs ]; then
+	echo "remove/$PACKAGE: Purging byte-compiled files for $FLAVOUR"
+	rm -f /usr/share/$FLAVOUR/site-lisp/$ELCFILE
+fi

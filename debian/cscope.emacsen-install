@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+# emacsen install script for the Debian GNU/Linux cscope package
+# based on the emacsen install script of the cmake package
+
+FLAVOUR=$1
+PACKAGE=cscope
+
+ELDIR=/usr/share/emacs/site-lisp/
+ELCDIR=/usr/share/$FLAVOUR/site-lisp/$PACKAGE
+ELFILE="xcscope.el"
+FLAGS="-batch -no-site-file -l path.el -f batch-byte-compile"
+
+if [ $FLAVOUR != emacs ]; then
+	echo "install/$PACKAGE: Byte-compiling for $FLAVOUR"
+
+	install -m 755 -d $ELCDIR
+	cd $ELDIR
+	cp $ELFILE $ELCDIR
+	cd $ELCDIR
+	cat << EOF > path.el
+(setq load-path (cons "." load-path) byte-compile-warnings nil)
+EOF
+	$FLAVOUR $FLAGS $ELFILE
+	rm -f $ELFILE path.el
+fi
