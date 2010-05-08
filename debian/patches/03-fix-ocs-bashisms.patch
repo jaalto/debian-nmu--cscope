@@ -1,0 +1,80 @@
+From 8294f4a6d33b69055623935b9b0969ee61a683a4 Mon Sep 17 00:00:00 2001
+From: Jari Aalto <jari.aalto@cante.net>
+Date: Sat, 8 May 2010 20:15:35 +0300
+Subject: [PATCH] contrib/ocs: Fix bashims (Closes: #480591)
+Organization: Private
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+
+Signed-off-by: Jari Aalto <jari.aalto@cante.net>
+---
+ contrib/ocs |   16 ++++++++--------
+ 1 files changed, 8 insertions(+), 8 deletions(-)
+
+diff --git a/contrib/ocs b/contrib/ocs
+index 736de94..c476ab8 100755
+--- a/contrib/ocs
++++ b/contrib/ocs
+@@ -87,7 +87,7 @@ if [ ! -d ${SYSDIR} ]; then
+ fi
+ 
+ # Check that cscope is in PATH
+-type cscope 1>/dev/null 2>&1
++which cscope 1>/dev/null 2>&1
+ 
+ if [ $? -ne 0 ]
+ then
+@@ -168,8 +168,8 @@ create_list()
+ 
+ 	if [ "${FORCE}" != "Y" ]
+ 	then
+-	    echo "\n${LIST}"
+-	    echo "Update the library? <(Y)es, (N)o, (Q)uit> [n] \c"
++	    printf "\n${LIST}\n"
++	    printf "Update the library? <(Y)es, (N)o, (Q)uit> [n] "
+ 	    read x y
+ 	    case $x in
+ 		[Yy]* )	;;
+@@ -177,9 +177,9 @@ create_list()
+ 		*)	return	;;
+ 	    esac
+ 	fi
+-	echo "Updating library:\n  ${LIST} \c"
++	printf "Updating library:\n  ${LIST} "
+     else
+-	echo "Creating library:\n  ${LIST} \c"
++	printf "Creating library:\n  ${LIST} "
+     fi
+ 
+     (
+@@ -197,7 +197,7 @@ create_list()
+ 				  -print
+    ) | grep -v SCCS | sort -u > ${LIST}
+ 
+-    echo "\n`cat ${LIST} | wc -l` files listed"
++    printf "\n`cat ${LIST} | wc -l` files listed\n"
+ }
+ 
+ #
+@@ -211,7 +211,7 @@ exp_inc()
+     then
+ 	for i in `cat ${theInc}`
+ 	do
+-	    echo "-I $i \c"
++	    printf "-I $i "
+ 	done
+     fi
+ }
+@@ -286,7 +286,7 @@ std_libs ${SYSDIR}$PWD
+ 
+ DIR=$PWD
+ if [ ! -n "${NOUPDATE}" -o -n "${SPECDEST}" ] ; then
+-echo "Create new library? <(L)ocal, (H)ome, (S)ystem, (Q)uit> [q] \c"
++printf "Create new library? <(L)ocal, (H)ome, (S)ystem, (Q)uit> [q] "
+ read x y
+ case $x in
+     [Ll]* )	DIR=$PWD		;;
+-- 
+1.7.0
+

@@ -1,0 +1,30 @@
+From d847996d6d4f9f9c4e78d237c3ccb58619642865 Mon Sep 17 00:00:00 2001
+From: Jari Aalto <jari.aalto@cante.net>
+Date: Sat, 8 May 2010 20:14:55 +0300
+Subject: [PATCH] contrib/xcscope/xcscope.el: Fix typo Closes: #438170)
+Organization: Private
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+
+Signed-off-by: Jari Aalto <jari.aalto@cante.net>
+---
+ contrib/xcscope/xcscope.el |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/contrib/xcscope/xcscope.el b/contrib/xcscope/xcscope.el
+index ce382a4..2a1098c 100644
+--- a/contrib/xcscope/xcscope.el
++++ b/contrib/xcscope/xcscope.el
+@@ -114,7 +114,7 @@
+ ;;	(define-key global-map [(control f11)] 'cscope-prev-symbol)
+ ;;	(define-key global-map [(control f12)] 'cscope-prev-file)
+ ;;      (define-key global-map [(meta f9)]  'cscope-display-buffer)
+-;;      (defin-ekey global-map [(meta f10)] 'cscope-display-buffer-toggle)
++;;      (define-key global-map [(meta f10)] 'cscope-display-buffer-toggle)
+ ;;
+ ;; 6. Restart (X)Emacs.  That's it.
+ ;;
+-- 
+1.7.0
+
