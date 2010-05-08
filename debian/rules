@@ -1,7 +1,5 @@
 #!/usr/bin/make -f
 
-include /usr/share/dpatch/dpatch.make
-
 DEST = $(CURDIR)/debian/cscope
 
 DEB_HOST_GNU_TYPE   ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
@@ -22,7 +20,7 @@ else
 	CFLAGS += -O2
 endif
 
-config.status: patch-stamp configure
+config.status: configure
 	dh_testdir
 
 ifneq "$(wildcard /usr/share/misc/config.sub)" ""
@@ -46,7 +44,7 @@ build-stamp: config.status
 
 	touch build-stamp
 
-clean: unpatch
+clean:
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp

@@ -2,9 +2,12 @@ cscope (15.7a-3.1) unstable; urgency=low
 
   [ Jari Aalto ]
   * Non-maintainer upload.
-  * debian/copyright
+    - Move to packaging format "3.0 (quilt)" due to patch.
+    - Move from dpatch to quilt patch system.
+   * debian/copyright
     - Point to GPL-2. Use FSF URL (Lintian).
   * debian/control
+    - (Build-Depends): Update to debhelper 7.1.
     - (cscope::Description): Fix french hyphens.
     - (cscope-el::Description): Extend description.
   * debian/{cscope,cscope-el}.preinst
@@ -12,11 +15,17 @@ cscope (15.7a-3.1) unstable; urgency=low
   * debian/cscope-indexer.1
     - Fix hyphens.
   * debian/patches
+    - Convert all dpatch(es) into quilt format.
     - (Number 04): Refresh patch. Fix also hyphens in manpage.
+  * debian/README.source
+    - Delete; obsoleted by new packaging format.
   * debian/ocs.1
     - Fix hyphens and spelling.
   * debian/rules
+    - Remove dpatch.
     - (clean): Add rm for config.log.
+  * debian/source/format
+    - New file.
 
   [ Hideki Yamane (Debian-JP) <henrich@debian.or.jp> ]
   * debian/control
@@ -25,7 +34,7 @@ cscope (15.7a-3.1) unstable; urgency=low
   * debian/cscope-el.{emacsen-install,emacsen-remove,install,preinst}
     - New files.
 
- -- Jari Aalto <jari.aalto@cante.net>  Sat, 08 May 2010 11:53:40 +0300
+ -- Jari Aalto <jari.aalto@cante.net>  Sat, 08 May 2010 20:22:13 +0300
 
 cscope (15.7a-3) unstable; urgency=low
 
