@@ -38,6 +38,6 @@ Description: Interactively examine a C program source, cscope emacs binding
  generated index tables to answer questions such as where is a symbol
  defined, where is a symbol referenced, etc.
  .
- cscope-el contains the Emacs interfaces to cscope: Bill Carpenter’s
- cscope.el and Darryl Okahata’s xcscope.el,
+ cscope-el contains the Emacs interfaces to cscope; Darryl Okahata’s
+ xcscope.el,
  See http://www.emacswiki.org/emacs/CScopeAndEmacs
