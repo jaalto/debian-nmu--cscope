@@ -3,14 +3,14 @@ Section: devel
 Priority: optional
 Maintainer: Tobias Klauser <tklauser@distanz.ch>
 Build-Depends: debhelper (>= 7), dpatch, autotools-dev, bison, flex, libncurses5-dev
-Standards-Version: 3.8.3
+Standards-Version: 3.8.4
 Homepage: http://cscope.sourceforge.net
 Vcs-Git: http://git.distanz.ch/scm/debian/pkg-cscope.git
 Vcs-Browser: http://git.distanz.ch/?p=debian/pkg-cscope.git
 
 Package: cscope
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, emacsen-common
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Suggests: cbrowser
 Description: Interactively examine a C program source
  Cscope is an interactive text screen based source browsing tool.
@@ -18,13 +18,20 @@ Description: Interactively examine a C program source
  and yacc files), it can also be used for C++ code.
  .
  Using cscope, you can easily search for where symbols are used and
- defined.  Cscope is designed to answer questions like:
+ defined. Cscope is designed to answer questions like:
  .
- Where is this variable used?
- What is the value of this preprocessor symbol?
- Where is this function in the source files?
- What functions call this function?
- What functions are called by this function?
- Where does the message "out of space" come from?
- Where is this source file in the directory structure?
- What files include this header file?
+  - Where is this variable used?
+  - What is the value of this preprocessor symbol?
+  - Where is this function in the source files?
+  - What functions call this function?
+  - What functions are called by this function?
+  - Where does the message "out of space" come from?
+  - Where is this source file in the directory structure?
+  - What files include this header file?
+
+Package: cscope-el
+Architecture: all
+Depends: cscope (>= ${source:Version}), emacs23 | emacsen, ${misc:Depends}
+Description: Interactively examine a C program source, cscope emacs binding
+ Cscope is an interactive text screen based source browsing tool.
+ This package contains Emacs interface to cscope.

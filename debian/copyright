@@ -59,11 +59,10 @@ Copyright: (webcscope)
   GNU General Public License for more details.
 
   You should have received a copy of the GNU General Public License
-  along with this program; if not, write to the Free Software
-  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
+  along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 On Debian systems, the complete text of the GNU General Public
-License can be found in `/usr/share/common-licenses/GPL'.
+License can be found in `/usr/share/common-licenses/GPL-2'.
 
 Copyright: (cgi-lib.pl, part of webcscope)
   Copyright (C) 1993-1999 Steven E. Brenner
@@ -86,8 +85,7 @@ Copyright: (xcscope and cscope-indexer)
   GNU General Public License for more details.
 
   You should have received a copy of the GNU General Public License
-  along with this program; if not, write to the Free Software
-  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
+  along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 On Debian systems, the complete text of the GNU General Public
-License can be found in `/usr/share/common-licenses/GPL'.
+License can be found in `/usr/share/common-licenses/GPL-2'.

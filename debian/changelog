@@ -1,3 +1,31 @@
+cscope (15.7a-3.1) unstable; urgency=low
+
+  [ Jari Aalto ]
+  * Non-maintainer upload.
+  * debian/copyright
+    - Point to GPL-2. Use FSF URL (Lintian).
+  * debian/control
+    - (Package::cscope::Description): Fix french hyphens.
+  * debian/{cscope,cscope-el}.preinst
+    - Add "set -e".
+  * debian/cscope-indexer.1
+    - Fix hyphens.
+  * debian/patches
+    - (Number 04): Refresh patch. Fix also hyphens in manpage.
+  * debian/ocs.1
+    - Fix hyphens and spelling.
+  * debian/rules
+    - (clean): Add rm for config.log.
+
+  [ Hideki Yamane (Debian-JP) <henrich@debian.or.jp> ]
+  * debian/control
+    - (Package::cscope-el): New. separete emacs lisp to cscope-el package
+      (Closes: #565727).
+  * debian/cscope-el.{emacsen-install,emacsen-remove,install,preinst}
+    - New files.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Sat, 08 May 2010 11:40:43 +0300
+
 cscope (15.7a-3) unstable; urgency=low
 
   * Depend on emacsen-common to be able to install xcscope.el correctly
