@@ -16,10 +16,12 @@ if [ $FLAVOUR != emacs ]; then
 
 	install -m 755 -d $ELCDIR
 	cd $ELDIR
-	cp $ELFILE $ELCDIR
+	install -m 644 $ELFILE $ELCDIR
+
 	cd $ELCDIR
 	cat << EOF > path.el
-(setq load-path (cons "." load-path) byte-compile-warnings nil)
+(setq load-path (cons "." load-path))
+(setq  byte-compile-warnings nil)
 EOF
 	$FLAVOUR $FLAGS $ELFILE
 	rm -f $ELFILE path.el
