@@ -1,3 +1,19 @@
+cscope (15.7a-3.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * debian/clean
+    - New file.
+  * debian/control
+    - (Standards-Version): Update to 3.9.1.
+    - (cscope::Suggests): Add cscope-el.
+  * debian/cscope-el.emacsen-install
+    - Move from debian/cscope.emacsen-install
+    - Prefer install(1) to cp(1).
+  * cscope-el.emacsen-remove
+    - Move from cscope.emacsen-remove
+
+ -- Jari Aalto <jari.aalto@cante.net>  Sat, 13 Nov 2010 15:23:12 +0200
+
 cscope (15.7a-3.1) unstable; urgency=low
 
   [ Jari Aalto ]
