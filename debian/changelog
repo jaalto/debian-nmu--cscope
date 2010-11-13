@@ -7,12 +7,12 @@ cscope (15.7a-3.2) unstable; urgency=low
     - (Standards-Version): Update to 3.9.1.
     - (cscope::Suggests): Add cscope-el.
   * debian/cscope-el.emacsen-install
-    - Move from debian/cscope.emacsen-install
+    - Move from debian/cscope.emacsen-install (Closes: #582964).
     - Prefer install(1) to cp(1).
   * cscope-el.emacsen-remove
     - Move from cscope.emacsen-remove
 
- -- Jari Aalto <jari.aalto@cante.net>  Sat, 13 Nov 2010 15:23:12 +0200
+ -- Jari Aalto <jari.aalto@cante.net>  Sat, 13 Nov 2010 15:51:58 +0200
 
 cscope (15.7a-3.1) unstable; urgency=low
 
