@@ -3,9 +3,11 @@ set -e
 
 FLAVOUR=$1
 PACKAGE=cscope
+
+ELCDIR=/usr/share/$FLAVOUR/site-lisp/$PACKAGE
 ELCFILE=xcscope.elc
 
 if [ $FLAVOUR != emacs ]; then
 	echo "remove/$PACKAGE: Purging byte-compiled files for $FLAVOUR"
-	rm -f /usr/share/$FLAVOUR/site-lisp/$ELCFILE
+	rm -f $ELCDIR/$ELCFILE
 fi
