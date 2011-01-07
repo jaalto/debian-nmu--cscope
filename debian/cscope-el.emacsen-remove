@@ -9,5 +9,5 @@ ELCFILE=xcscope.elc
 
 if [ $FLAVOUR != emacs ]; then
 	echo "remove/$PACKAGE: Purging byte-compiled files for $FLAVOUR"
-	rm -f $ELCDIR/$ELCFILE
+	rm -vf $ELCDIR/$ELCFILE
 fi
