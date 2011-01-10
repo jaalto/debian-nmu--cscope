@@ -1,10 +1,9 @@
 cscope (15.7a-3.3) unstable; urgency=low
 
   * debian/cscope-el.emacsen-remove
-    - (ELCDIR): New variable. Fix path of *.elc during remove.
-      (Closes: #608985).
+    - (ELCDIR): New variable. Fix removing of *.elc (Closes: #608985).
 
- -- Jari Aalto <jari.aalto@cante.net>  Fri, 07 Jan 2011 11:47:00 +0200
+ -- Jari Aalto <jari.aalto@cante.net>  Mon, 10 Jan 2011 18:55:28 +0200
 
 cscope (15.7a-3.2) unstable; urgency=low
 
