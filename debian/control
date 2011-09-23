@@ -2,15 +2,15 @@ Source: cscope
 Section: devel
 Priority: optional
 Maintainer: Tobias Klauser <tklauser@distanz.ch>
-Build-Depends: debhelper (>= 7.1), autotools-dev, bison, flex, libncurses5-dev
-Standards-Version: 3.9.1
+Build-Depends: debhelper (>= 8), autotools-dev, bison, flex, libncurses5-dev
+Standards-Version: 3.9.2
 Homepage: http://cscope.sourceforge.net
 Vcs-Git: http://git.distanz.ch/scm/debian/pkg-cscope.git
 Vcs-Browser: http://git.distanz.ch/?p=debian/pkg-cscope.git
 
 Package: cscope
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, ed
 Suggests: cbrowser, cscope-el
 Description: Interactively examine a C program source
  Cscope is an interactive text screen based source browsing tool.
