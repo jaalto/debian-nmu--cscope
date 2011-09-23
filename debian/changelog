@@ -1,3 +1,15 @@
+cscope (15.7a-3.4) unstable; urgency=low
+
+  * debian/compat
+    - Update to 8.
+  * debian/control
+    - (Build-Depends): Update to 8.
+    - (Depends): add ed. The search-and-replace function in cscope is
+      implemented using it.
+    - (Standards-Version): Update to 3.9.2
+
+ -- Jari Aalto <jari.aalto@cante.net>  Fri, 23 Sep 2011 19:10:11 +0300
+
 cscope (15.7a-3.3) unstable; urgency=low
 
   * debian/cscope-el.emacsen-remove
