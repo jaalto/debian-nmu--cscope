@@ -1,3 +1,11 @@
+cscope (15.7a-3.5) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * debian/control
+    - (Suggests): Remove cbrowser (Closes: #651945).
+
+ -- Jari Aalto <jari.aalto@cante.net>  Tue, 13 Dec 2011 18:33:47 +0200
+
 cscope (15.7a-3.4) unstable; urgency=low
 
   * Non-maintainer upload.
